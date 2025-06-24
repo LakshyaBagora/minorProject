@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="project-name">
+            <strong>SMARTSHELF</strong>
+            <span>"Effortless Bookkeeping, Endless Possibilities."</span>
+        </div>
+        <div class="buttons">
+            <button id="login-btn">Login</button>
+            <button id="signup-btn">Sign Up</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-container">
+            <!-- Login Form -->
+            <div class="form-box active" id="login-form">
+                <h2>Login</h2>
+                <form action="LoginChecker" method="post">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form-box" id="signup-form">
+                <h2>Sign Up</h2>
+                <form action="Signup" method="post">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="cpassword" placeholder="Confirm Password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle between forms
+        const loginBtn = document.getElementById('login-btn');
+        const signupBtn = document.getElementById('signup-btn');
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+
+        loginBtn.addEventListener('click', () => {
+            loginForm.classList.add('active');
+            signupForm.classList.remove('active');
+        });
+
+        signupBtn.addEventListener('click', () => {
+            signupForm.classList.add('active');
+            loginForm.classList.remove('active');
+        });
+        
+          
+    </script>
+</body>
+</html>
+
+
+
+
