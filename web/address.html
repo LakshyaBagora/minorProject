@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+             background: linear-gradient(to right, #ffffff, #ffe4e1);
+            /*background: url('images/,,,,.jpg') no-repeat center  center/cover fixed;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            width: 400px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);/* Transparent background */
+            /*background: burlywood;*/
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            
+        }
+        .form-container input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-size: 20px;
+            background: transparent; /* Transparent input fields */
+        }
+        .form-container input::placeholder {
+            color: #555;
+        }
+        .form-container button {
+            width: 60%;
+            margin-left: 20%;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            background: #f4b400; /* Golden button */
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s linear;
+        }
+        .form-container button:hover {
+            background: #e09e00;
+        
+        
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="AdressInsert" method="post"> 
+            <input type="text" name="address" placeholder="Enter your address" required>
+            <input type="text" name="pincode" placeholder="Enter your pincode" required>
+            <input type="tel" name="number" placeholder="Enter your mobile number" required>
+            <button type="submit"> Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

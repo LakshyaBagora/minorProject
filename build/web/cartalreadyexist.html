@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartShelf</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(to right, #ffffff, #ffe4e1);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px); /* Blurring the background */
+        }
+
+        .cart {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .cart h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .cart-btn {
+         
+            
+            background: #007bff;
+            border: none;
+            
+            text-decoration: none;
+            transition: background 0.3s;
+            background: red;
+    color: white;
+    font-size: 18px; /* Slightly bigger text */
+    padding: 12px 24px; /* Bigger size */
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50px;
+        }
+
+        .bookmark-btn-btn:hover {
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="cart">
+        <h2>This book is already in cart.</h2>
+        <a href="cart.jsp" class="cart-btn">CART</a>
+    </div>
+</body>
+</html>
